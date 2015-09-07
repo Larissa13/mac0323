@@ -1,0 +1,24 @@
+/* Nome: Larissa de Oliveira Penteado */
+/* NUSP: 8941338 */
+/* Exercicio-Programa 1 de MAC0323*/
+
+// java-introcs Cos  30 0 0 2 2  1000 1000 (Cos1.jpg)
+// java-introcs Cos  20 -1 -2 5 5  1000 1000 (cos2.jpg)
+// Criamos a funçao f(x)=cos(x) e a desenhamos atraves do NewtonBasins.draw
+
+public class Cos {
+	public static void main (String[] args) {
+		int maxI = Integer.parseInt(args[0]);
+		double xc = Double.parseDouble(args[1]);
+		double yc = Double.parseDouble(args[2]);
+		double xsize = Double.parseDouble(args[3]);
+		double ysize = Double.parseDouble(args[4]);
+		int M = Integer.parseInt(args[5]);
+		int N = Integer.parseInt(args[6]);
+
+		HolomorphicFunction f = new Cosfn ();
+		
+		NewtonBasins.draw(f, maxI, xc, yc, xsize, ysize, M, N);
+
+	}
+}
